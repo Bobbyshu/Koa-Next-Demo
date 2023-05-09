@@ -32,7 +32,7 @@ button {
 }
 
 /* illegal style */
-.illegal-pwd{
+.illegal-pwd {
     border: red 1px solid !important;
     box-shadow: 0 0 5px red;
 }

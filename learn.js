@@ -64,6 +64,7 @@ function checkIllegal(e) {
 }
 
 // XHR request
+// error in cross site
 function http() {
     let xhr = new XMLHttpRequest()
     xhr.open('GET', 'https://www.baidu.com')
