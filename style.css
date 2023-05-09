@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+input {
+    border: 0;
+    background: #e0e0e0;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    width: 250px;
+    font-size: 15px;
+    margin-top: 20px; 
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    margin-top: 40px;
+    background: #4174e3;
+    border: 0;
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    color: white;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px blue;
+}
+
+button:focus {
+    outline: 0;
+    background: #3b4f72;
+}
