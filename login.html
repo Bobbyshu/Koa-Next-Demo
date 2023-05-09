@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script src="bubble.js">
+    <script src="learn.js">
 
     </script>
     <meta charset="UTF-8">
@@ -22,12 +22,14 @@
         </div>
         <div>
             <label>
-                <input type="password" placeholder="password">
+                <input type="password" placeholder="password" 
+                oninput="checkIllegal(this)" id="pwd">
             </label>
         </div>
         <div>
             <button>Login</button>
         </div>
+        <input id="button" type="button" onclick="http()">
     </form>
 </body>
 
