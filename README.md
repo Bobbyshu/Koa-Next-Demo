@@ -1,2 +1,2 @@
 # Project-Web
-This is a front end project
+This is my front end internship project.
