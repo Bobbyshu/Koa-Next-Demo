@@ -1,3 +1,12 @@
+/*
+ * @Author: BobbyShu shu.yun@northeastern.edu
+ * @Date: 2023-05-09 14:26:15
+ * @LastEditors: Bobby Shu shu.yun@northeastern.edu
+ * @LastEditTime: 2023-05-09 17:53:06
+ * @FilePath: \Project-Web\learn.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+
 // let a = 10;
 // console.info(typeof a)
 // a = 'Hello World'
@@ -48,25 +57,25 @@
 // obj.f()
 
 function f() {
-    window.alert("You are typing!")
+  window.alert("You are typing!");
 }
 
-let a = document.getElementById("pwd")
-window.alert(a)
+let a = document.getElementById("pwd");
+window.alert(a);
 
 // limit length of password should longer than 6
 function checkIllegal(e) {
-    if (e.value.length < 6) {
-        e.setAttribute("class", "illegal-pwd")
-    } else {
-        e.removeAttribute("class")
-    }
+  if (e.value.length < 6) {
+    e.setAttribute("class", "illegal-pwd");
+  } else {
+    e.removeAttribute("class");
+  }
 }
 
 // XHR request
 // error in cross site
 function http() {
-    let xhr = new XMLHttpRequest()
-    xhr.open('GET', 'https://www.baidu.com')
-    xhr.send()
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://www.baidu.com");
+  xhr.send();
 }
