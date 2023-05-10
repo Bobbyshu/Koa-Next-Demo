@@ -2,12 +2,13 @@
  * @Author: Bobby Shu shu.yun@northeastern.edu
  * @Date: 2023-05-09 17:03:15
  * @LastEditors: Bobby Shu shu.yun@northeastern.edu
- * @LastEditTime: 2023-05-09 17:53:52
+ * @LastEditTime: 2023-05-10 11:01:20
  * @FilePath: \Project-Web\next_js_study\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <html>
   <body>
+    <p>Player1: Bobby</p>
     <div id="app"></div>
     <script type="text/javascript">
       // Select the div element with 'app' id
@@ -26,6 +27,18 @@
 
       // place the H1 element inside the div
       app.appendChild(header);
+
+      // document.querySelector("html").addEventListener("click", () => {
+      //   alert("User are clicking");
+      // });
+      const para = document.querySelector("p");
+
+      para.addEventListener("click", updateName);
+
+      function updateName() {
+        let name = prompt("Please input a new username: ");
+        para.textContent = "Player 1: " + name;
+      }
     </script>
   </body>
 </html>
