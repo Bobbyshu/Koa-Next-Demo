@@ -1,0 +1,68 @@
+<!--
+ * @Author: Bobby Shu shu.yun@northeastern.edu
+ * @Date: 2023-05-09 17:27:55
+ * @LastEditors: Bobby Shu shu.yun@northeastern.edu
+ * @LastEditTime: 2023-05-11 13:35:16
+ * @FilePath: \Project-Web\next_js_study\react-indexl.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<html>
+  <body>
+    <div id="app"></div>
+
+    <!-- react script -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Babel Script -->
+    <!-- transfer JSX to javascript for browser  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- <script type="text/jsx">
+      const app = document.getElementById('app')
+      ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app)
+    </script> -->
+
+    <script type="text/jsx">
+      const app = document.getElementById("app");
+      const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+      // function Header() {
+      //   return <h1>Develop. Preview. Ship. 🚀</h1>;
+      // }
+      function Header({ title }) {
+        console.log(title)
+        return <h1>{title ? title : 'Default title(when u input nothing)'}</h1>
+      }
+
+      function HomePage() {
+        const[likes, setLikes] = React.useState(0);
+
+        function handleClick() {
+          setLikes(likes + 1);
+        }
+
+        return (
+          <div>
+            {/* Nesting the Header component */}
+            {/* <Header /> */}
+            <Header title="React 💙" />
+            <Header title="A new title" />
+            <Header />
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+
+            <button onClick={handleClick}>Likes ({likes})</button>
+          </div>
+        );
+
+
+      }
+
+      ReactDOM.render(<HomePage />, app);
+    </script>
+  </body>
+</html>
