@@ -1,0 +1,57 @@
+<!--
+ * @Author: Bobby Shu shu.yun@northeastern.edu
+ * @Date: 2023-05-17 13:59:27
+ * @LastEditors: Bobby Shu shu.yun@northeastern.edu
+ * @LastEditTime: 2023-05-17 14:04:36
+ * @FilePath: \Project-Web\learnJS\DOM\event\click_to_hide.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 1000px;
+        height: 200px;
+        background-color: pink;
+        margin: 100px auto;
+        text-align: center;
+        font-size: 50px;
+        line-height: 200px;
+        font-weight: 700;
+      }
+
+      .box1 {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        background-color: skyblue;
+        text-align: center;
+        line-height: 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      我是广告
+      <div class="box1">X</div>
+    </div>
+    <script>
+      const btn = document.querySelector(".box1");
+      const ad = document.querySelector(".box");
+      btn.addEventListener("click", function () {
+        ad.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
