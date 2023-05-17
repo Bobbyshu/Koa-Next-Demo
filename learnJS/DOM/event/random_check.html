@@ -1,0 +1,90 @@
+<!--
+ * @Author: Bobby Shu shu.yun@northeastern.edu
+ * @Date: 2023-05-17 14:09:31
+ * @LastEditors: Bobby Shu shu.yun@northeastern.edu
+ * @LastEditTime: 2023-05-17 14:24:08
+ * @FilePath: \Project-Web\learnJS\DOM\event\random_check.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .box {
+        width: 600px;
+        margin: 50px auto;
+        display: flex;
+        font-size: 25px;
+        line-height: 40px;
+      }
+
+      .qs {
+        width: 450px;
+        height: 40px;
+        color: red;
+      }
+
+      .btns {
+        text-align: center;
+      }
+
+      .btns button {
+        width: 120px;
+        height: 35px;
+        margin: 0 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>随机点名</h2>
+    <div class="box">
+      <span>名字是：</span>
+      <div class="qs">这里显示姓名</div>
+    </div>
+    <div class="btns">
+      <button class="start">开始</button>
+      <button class="end">结束</button>
+    </div>
+
+    <script>
+      // 数据数组
+      const arr = ["马超", "黄忠", "赵云", "关羽", "张飞"];
+      const name = document.querySelector(".qs");
+      const begin = document.querySelector(".start");
+      let i = 0;
+      let timer = 0;
+
+      begin.addEventListener("click", function () {
+        timer = setInterval(function () {
+          random = parseInt(Math.random() * arr.length);
+          name.innerHTML = arr[random];
+        }, 35);
+
+        if (arr.length == 1) {
+          begin.disabled = true;
+          finish.disabled = true;
+        }
+      });
+
+      const finish = document.querySelector(".end");
+      finish.addEventListener("click", function () {
+        clearInterval(timer);
+        arr.splice(i, 1);
+        console.log(arr);
+      });
+    </script>
+  </body>
+</html>
