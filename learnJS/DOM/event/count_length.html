@@ -120,17 +120,17 @@
   <script>
     const tx = document.querySelector('#tx')
     const total = document.querySelector('.total')
-    // 1. 当我们文本域获得了焦点，就让 total 显示出来
+    // when focus, show total
     tx.addEventListener('focus', function () {
       total.style.opacity = 1
     })
-    // 2. 当我们文本域失去了焦点，就让 total 隐藏出来
+    // when blur, hide total
     tx.addEventListener('blur', function () {
       total.style.opacity = 0.5
     })
-    // 3. 检测用户输入
+    // detect input
     tx.addEventListener('input', function () {
-      // console.log(tx.value.length)  得到输入的长度
+      // console.log(tx.value.length)
       total.innerHTML = `${tx.value.length}/200字`
     })
 
